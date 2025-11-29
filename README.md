@@ -114,4 +114,4 @@ Each use case is ranked by complexity with step-by-step instructions.
 - **Package Management:** uv for Python, npm for JavaScript
 
 ## Source
-- ** https://github.com/karpathy/llm-council
+- [Karpathy/llm-council](https://github.com/karpathy/llm-council)
