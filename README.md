@@ -112,3 +112,6 @@ Each use case is ranked by complexity with step-by-step instructions.
 - **Frontend:** React + Vite, react-markdown for rendering
 - **Storage:** JSON files in `data/conversations/`
 - **Package Management:** uv for Python, npm for JavaScript
+
+## Source
+- ** https://github.com/karpathy/llm-council
