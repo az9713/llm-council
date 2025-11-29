@@ -1,0 +1,100 @@
+.tag-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: #e8f4fd;
+  border: 1px solid #b8daff;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #0066cc;
+}
+
+.tag-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 1;
+  color: #0066cc;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.tag-remove:hover {
+  opacity: 1;
+  background: rgba(0, 102, 204, 0.1);
+}
+
+.tag-input-container {
+  position: relative;
+}
+
+.tag-input {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 12px;
+  outline: none;
+}
+
+.tag-input:focus {
+  border-color: #4a90e2;
+}
+
+.tag-input::placeholder {
+  color: #999;
+}
+
+.tag-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  padding: 6px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  z-index: 10;
+}
+
+.tag-suggestion {
+  padding: 4px 10px;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 11px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.tag-suggestion:hover {
+  background: #e8f4fd;
+  border-color: #b8daff;
+  color: #0066cc;
+}

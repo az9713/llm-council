@@ -1,0 +1,314 @@
+.stage {
+  margin: 24px 0;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.stage-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.stage-title {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px 6px 0 0;
+  color: #666;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.tab-model-name {
+  white-space: nowrap;
+}
+
+.tab:hover {
+  background: #f0f0f0;
+  color: #333;
+  border-color: #4a90e2;
+}
+
+.tab.active {
+  background: #ffffff;
+  color: #4a90e2;
+  border-color: #4a90e2;
+  border-bottom-color: #ffffff;
+  font-weight: 600;
+}
+
+/* Reasoning model indicator on tab */
+.tab.has-reasoning {
+  padding-right: 24px;
+}
+
+.reasoning-indicator {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  color: #f59e0b;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.tab-content {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+.model-name {
+  color: #888;
+  font-size: 12px;
+  margin-bottom: 12px;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Badge for reasoning models */
+.reasoning-model-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 1px solid #f59e0b;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #92400e;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Badge for Chain-of-Thought models */
+.cot-model-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border: 1px solid #3b82f6;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #1d4ed8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Tab styling for CoT */
+.tab.has-cot {
+  padding-right: 8px;
+}
+
+/* Reasoning Section */
+.reasoning-section {
+  margin-bottom: 16px;
+}
+
+.reasoning-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border: 1px solid #fcd34d;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #92400e;
+  width: 100%;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+.reasoning-toggle:hover {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-color: #f59e0b;
+}
+
+.reasoning-toggle.expanded {
+  border-radius: 6px 6px 0 0;
+  border-bottom: none;
+}
+
+.reasoning-toggle-icon {
+  font-size: 10px;
+  transition: transform 0.2s;
+}
+
+.reasoning-toggle-text {
+  font-weight: 500;
+}
+
+.reasoning-content {
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+}
+
+.reasoning-header {
+  padding: 8px 14px;
+  background: #fef3c7;
+  font-size: 11px;
+  font-weight: 600;
+  color: #92400e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #fcd34d;
+}
+
+.reasoning-text {
+  padding: 14px;
+  color: #78350f;
+  line-height: 1.6;
+  font-size: 13px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.reasoning-text pre {
+  background: #fef3c7;
+  border: 1px solid #fcd34d;
+}
+
+.reasoning-text code {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Response Section */
+.response-section {
+  margin-top: 0;
+}
+
+.response-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.response-text {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Streaming Indicators */
+.streaming-indicator {
+  display: inline-block;
+  padding: 4px 10px;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border: 1px solid #60a5fa;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #1d4ed8;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Streaming dot on tabs */
+.streaming-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #3b82f6;
+  border-radius: 50%;
+  margin-left: 6px;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.tab.streaming {
+  border-color: #60a5fa;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.tab.streaming:hover {
+  border-color: #3b82f6;
+}
+
+/* Streaming badge in model name */
+.streaming-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border: 1px solid #60a5fa;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #1d4ed8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Streaming cursor */
+.streaming-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: #3b82f6;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.response-text.streaming {
+  min-height: 40px;
+}
+
+/* Dynamic Routing Badge */
+.routing-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: help;
+}

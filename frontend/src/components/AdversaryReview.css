@@ -1,0 +1,388 @@
+/* AdversaryReview Styles */
+/* Red/rose theme to indicate critical review (devil's advocate) */
+
+.adversary-review {
+  margin-top: 16px;
+  padding: 16px;
+  background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%);
+  border: 1px solid #fda4af;
+  border-radius: 8px;
+}
+
+.adversary-review.has-issues {
+  border-color: #f87171;
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+}
+
+.adversary-review.no-issues {
+  border-color: #86efac;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+.adversary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.adversary-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.adversary-title h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #be123c;
+}
+
+.adversary-icon {
+  font-size: 18px;
+  color: #e11d48;
+}
+
+.adversary-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.adversary-status.reviewing {
+  background: #ffe4e6;
+  color: #be123c;
+}
+
+.adversary-status.revising {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.spinner-small {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fda4af;
+  border-top-color: #e11d48;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Severity badges */
+.severity-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.severity-badge.critical {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  color: #b91c1c;
+  border: 1px solid #f87171;
+}
+
+.severity-badge.major {
+  background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%);
+  color: #c2410c;
+  border: 1px solid #fb923c;
+}
+
+.severity-badge.minor {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  color: #a16207;
+  border: 1px solid #fbbf24;
+}
+
+.severity-badge.none {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  color: #15803d;
+  border: 1px solid #4ade80;
+}
+
+.toggle-btn {
+  padding: 4px 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  font-size: 12px;
+  transition: color 0.2s;
+}
+
+.toggle-btn:hover {
+  color: #e11d48;
+}
+
+/* Summary line */
+.adversary-summary {
+  font-size: 13px;
+  color: #4b5563;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(253, 164, 175, 0.3);
+}
+
+.adversary-summary strong {
+  color: #be123c;
+}
+
+.adversary-review.no-issues .adversary-summary {
+  border-bottom-color: rgba(134, 239, 172, 0.3);
+}
+
+.adversary-review.no-issues .adversary-summary strong {
+  color: #15803d;
+}
+
+/* Content sections */
+.adversary-content {
+  margin-top: 16px;
+}
+
+.adversary-model-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.model-label {
+  color: #6b7280;
+}
+
+.model-name {
+  color: #be123c;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #be123c;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.section-icon {
+  font-size: 14px;
+}
+
+/* Critique section */
+.critique-section {
+  margin-bottom: 16px;
+}
+
+.critique-text {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  border: 1px solid #fda4af;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.critique-text.streaming {
+  position: relative;
+}
+
+/* Revision section */
+.revision-section {
+  padding-top: 16px;
+  border-top: 1px solid rgba(253, 164, 175, 0.3);
+}
+
+.revision-text {
+  padding: 12px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-radius: 6px;
+  border: 1px solid #86efac;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.revision-text.streaming {
+  position: relative;
+}
+
+.streaming-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: #e11d48;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Result indicator */
+.result-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.result-indicator.passed {
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  color: #15803d;
+}
+
+.result-indicator.revised {
+  background: #dbeafe;
+  border: 1px solid #93c5fd;
+  color: #1d4ed8;
+}
+
+.result-indicator.issues-noted {
+  background: #fef3c7;
+  border: 1px solid #fcd34d;
+  color: #a16207;
+}
+
+.result-icon {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.result-text {
+  flex: 1;
+}
+
+/* Small badge for Stage 3 header */
+.adversary-badge-small {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.adversary-badge-small.passed {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.adversary-badge-small.revised {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.adversary-badge-small.critical {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.adversary-badge-small.major {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.adversary-badge-small.minor {
+  background: #fef3c7;
+  color: #ca8a04;
+}
+
+/* Toggle control */
+.adversary-toggle-control {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.toggle-text {
+  font-size: 13px;
+  color: #374151;
+}
+
+.toggle-switch {
+  width: 40px;
+  height: 22px;
+  background: #d1d5db;
+  border-radius: 11px;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.toggle-switch.enabled {
+  background: #e11d48;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch.enabled .toggle-slider {
+  transform: translateX(18px);
+}
+
+/* Markdown content styling */
+.adversary-review .markdown-content {
+  padding: 0;
+}
+
+.adversary-review .markdown-content p {
+  margin: 0 0 8px 0;
+}
+
+.adversary-review .markdown-content p:last-child {
+  margin-bottom: 0;
+}
+
+.adversary-review .markdown-content ul,
+.adversary-review .markdown-content ol {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.adversary-review .markdown-content li {
+  margin: 4px 0;
+}

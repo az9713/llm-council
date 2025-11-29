@@ -1,0 +1,216 @@
+/* CostDisplay Component Styles */
+
+.cost-display {
+  font-size: 13px;
+}
+
+/* Compact View (inline summary) */
+.cost-display-compact {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  color: #166534;
+}
+
+.cost-summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cost-label {
+  font-weight: 500;
+  color: #15803d;
+}
+
+.cost-value {
+  font-weight: 600;
+  font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+}
+
+.cost-tokens {
+  color: #4ade80;
+  font-size: 12px;
+}
+
+/* Expanded View (full breakdown) */
+.cost-display-expanded {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.cost-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 12px;
+}
+
+.cost-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.cost-total {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cost-total-label {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.cost-total-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #059669;
+  font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+}
+
+/* Stage Breakdown */
+.cost-stages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cost-stage {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.cost-stage-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.cost-stage-name {
+  font-weight: 600;
+  color: #374151;
+  min-width: 60px;
+}
+
+.cost-stage-value {
+  font-weight: 600;
+  color: #059669;
+  font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+}
+
+.cost-stage-percent {
+  color: #9ca3af;
+  font-size: 11px;
+}
+
+.cost-stage-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.cost-detail {
+  font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+}
+
+.cost-detail-models {
+  color: #9ca3af;
+}
+
+/* Footer Summary */
+.cost-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cost-footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.cost-footer-label {
+  font-size: 10px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cost-footer-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+}
+
+/* Model Cost Badge (inline for individual responses) */
+.model-cost-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 10px;
+  color: #6b7280;
+  font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.model-cost-tokens {
+  color: #9ca3af;
+}
+
+.model-cost-divider {
+  color: #d1d5db;
+}
+
+.model-cost-value {
+  color: #059669;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .cost-display-expanded {
+    padding: 12px;
+  }
+
+  .cost-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .cost-footer {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .cost-footer-item {
+    flex: 1;
+    min-width: 80px;
+  }
+}
